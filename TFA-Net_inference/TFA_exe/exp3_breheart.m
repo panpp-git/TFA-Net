@@ -8,12 +8,6 @@ clims_lim=50;
 
 
 load 1110_zzq_80_1_Raw_0_chan1.mat
-data_reshape=chan1(:,1:200:end).';
-pulsenum=size(data_reshape,1);
-for i=1:pulsenum
-    spc=fft(data_reshape(i,:));
-    sig(i)=spc(21);  
-end
 data_reshape=sig.';
 sz=size(data_reshape);
 time=16.25;
